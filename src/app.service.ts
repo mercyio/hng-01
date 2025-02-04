@@ -1,5 +1,7 @@
 import { BadRequestException, Injectable } from '@nestjs/common';
 import { HttpService } from '@nestjs/axios';
+import { ENVIRONMENT } from './common/configs/environment';
+import { NUMBER_PROPERTIES } from './common/constants/number-constant';
 
 @Injectable()
 export class AppService {
@@ -50,9 +52,11 @@ export class AppService {
     const isArmstrong = Number(sum) === Number(number);
 
     if (isArmstrong) {
-      properties.push('armstrong');
+      properties.push(NUMBER_PROPERTIES.armstrong);
     }
-    properties.push(number % 2 === 0 ? 'even' : 'odd');
+    properties.push(
+      number % 2 === 0 ? NUMBER_PROPERTIES.even : NUMBER_PROPERTIES.odd,
+    );
 
     // Calculate digit sum
     const digitSum = String(number)
@@ -62,7 +66,7 @@ export class AppService {
     // Get fun fact
     let funFact = '';
     const response = await this.httpService.axiosRef.get<string>(
-      `http://numbersapi.com/${number}/math`,
+      `${ENVIRONMENT.NUMBERS.API}/${number}/math`,
     );
     funFact = response.data;
 

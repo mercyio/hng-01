@@ -1,6 +1,3 @@
-# hng-01
-Hire Skilled Developers - https://hng.tech/hire/nodejs-developers
-
 # HNG Stage 01 API
 
 A simple REST API that takes a number and returns interesting mathematical properties about it, along with a fun fact.
@@ -21,7 +18,7 @@ Install project dependencies using npm :
 ### Local Development Setup
 Clone the repository: 
   ```bash
-   `git clone ...........`
+   `git clone https://github.com/mercyio/hng-01.git`
    ```
 
 
@@ -55,31 +52,32 @@ Your backend server should now be running.
 ## API Documentation
 
 ### Endpoint
-Production: GET/ ...................
-Local: GET/ http://localhost:5575/classify-number?number={{number}}
+Production: GET/https://hng-01-2i4b.onrender.com/api/classify-number?number={{number}}
+Local: GET/http://localhost:5575/api/classify-number?number={{number}}
 
 ### Base URL
 The API will be running at:
-Production: ...............
-Local: http://localhost:5575/classify-number?number={{number}}
+Production: https://hng-01-2i4b.onrender.com/api/classify-number?number={{number}}
+Local: http://localhost:5575/api/classify-number?number={{number}}
 
 ### Example Request 
-Using Browser
-local: Simply visit http://localhost:5575/classify-number?number=371 in your web browser
+### Using Browser
+local: Simply visit http://localhost:5575/api/classify-number?number=371 in your web browser
 or
-production: ...................
+production: https://hng-01-2i4b.onrender.com/api/classify-number?number=371
 
-Using cURL
-curl http://localhost:5575/classify-number?number=371
+### Using cURL
+curl http://localhost:5575/api/classify-number?number=371
 
-Using Postman
-Open Postman
-Create a new http GET request
-Enter URL: http://localhost:5575/classify-number?number=371 or  ........
-Make sure your code is running if you are using the localhost url
-Click Send
-View the JSON response
+### Using Postman
+Open Postman,
+Create a new http GET request,
+Enter URL: http://localhost:5575/api/classify-number?number=371 or  https://hng-01-2i4b.onrender.com/api/classify-number?number=371
 
+Click Send,
+View the JSON response,
+
+NB: Make sure your code is running if you are using the localhost url
 
 ### Example Response
 
@@ -92,7 +90,3 @@ View the JSON response
     "digit_sum": 11,
     "fun_fact": "371 is a narcissistic number."
 }
-
-
-# hng-01
-A simple REST API that takes a number and returns interesting mathematical properties about it, along with a fun fact.

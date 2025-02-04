@@ -39,7 +39,7 @@ export class AppService {
 
     const properties: string[] = [];
 
-    // Calculate Armstrong number
+    // Calculate Armstrong number and get the number properties[armstrong, even, odd]
     const digits = String(number).split('');
     const power = digits.length;
 

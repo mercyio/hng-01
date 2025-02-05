@@ -10,7 +10,7 @@ export class AppService {
   async classifyNumber(number: number) {
     if (!number || isNaN(Number(number)) || !Number.isInteger(Number(number))) {
       throw new BadRequestException({
-        number: 'alphabet',
+        number: number,
         error: true,
       });
     }
